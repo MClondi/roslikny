@@ -41,14 +41,14 @@ namespace Roslinky
 
             var title = new Label();
             title.Text = plant.name;
-            title.Font = new Font(title.Font.FontFamily, 15);
+            title.Font = new Font(title.Font.FontFamily, 14);
             title.Width = width - (VIEW_HEIGHT + 25);
             title.Location = new Point(VIEW_HEIGHT + 1, 0);
             title.DoubleClick += this.PlantView_DoubleClick;
             this.Controls.Add(title);
 
             var description = new Label();
-            description.Text = plant.notes;
+            description.Text = plant.notes.Split(new[] { '\r', '\n' }).FirstOrDefault();
             description.Width = width - (VIEW_HEIGHT + 25);
             description.Location = new Point(VIEW_HEIGHT + 1, title.Height + 10);
             description.DoubleClick += this.PlantView_DoubleClick;

@@ -32,9 +32,9 @@
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.textBoxNotes = new System.Windows.Forms.RichTextBox();
-            this.labelTypes = new System.Windows.Forms.Label();
             this.buttonOpen = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
+            this.textBoxTypes = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +45,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox.Location = new System.Drawing.Point(12, 12);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(454, 271);
+            this.pictureBox.Size = new System.Drawing.Size(454, 359);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             // 
@@ -70,20 +70,10 @@
             this.textBoxNotes.TabIndex = 2;
             this.textBoxNotes.Text = "";
             // 
-            // labelTypes
-            // 
-            this.labelTypes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTypes.AutoSize = true;
-            this.labelTypes.Location = new System.Drawing.Point(472, 191);
-            this.labelTypes.Name = "labelTypes";
-            this.labelTypes.Size = new System.Drawing.Size(35, 13);
-            this.labelTypes.TabIndex = 3;
-            this.labelTypes.Text = "label2";
-            // 
             // buttonOpen
             // 
             this.buttonOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOpen.Location = new System.Drawing.Point(472, 260);
+            this.buttonOpen.Location = new System.Drawing.Point(472, 347);
             this.buttonOpen.Name = "buttonOpen";
             this.buttonOpen.Size = new System.Drawing.Size(156, 23);
             this.buttonOpen.TabIndex = 4;
@@ -94,7 +84,7 @@
             // buttonEdit
             // 
             this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit.Location = new System.Drawing.Point(761, 260);
+            this.buttonEdit.Location = new System.Drawing.Point(761, 347);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(87, 23);
             this.buttonEdit.TabIndex = 5;
@@ -102,13 +92,23 @@
             this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
+            // textBoxTypes
+            // 
+            this.textBoxTypes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTypes.Location = new System.Drawing.Point(472, 194);
+            this.textBoxTypes.Name = "textBoxTypes";
+            this.textBoxTypes.ReadOnly = true;
+            this.textBoxTypes.Size = new System.Drawing.Size(376, 147);
+            this.textBoxTypes.TabIndex = 6;
+            this.textBoxTypes.Text = "";
+            // 
             // PlantDetail
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(860, 291);
+            this.ClientSize = new System.Drawing.Size(860, 379);
+            this.Controls.Add(this.textBoxTypes);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonOpen);
-            this.Controls.Add(this.labelTypes);
             this.Controls.Add(this.textBoxNotes);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.pictureBox);
@@ -126,8 +126,8 @@
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.RichTextBox textBoxNotes;
-        private System.Windows.Forms.Label labelTypes;
         private System.Windows.Forms.Button buttonOpen;
         private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.RichTextBox textBoxTypes;
     }
 }

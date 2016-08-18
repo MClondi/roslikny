@@ -30,7 +30,7 @@ namespace Roslinky
             pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             labelTitle.Text = plant.name;
             textBoxNotes.Text = plant.notes;
-            labelTypes.Text = String.Join(", ", plant.types.ToArray());
+            textBoxTypes.Text = String.Join(", ", plant.types.ToArray());
         }
 
         private void buttonOpen_Click(object sender, EventArgs e)

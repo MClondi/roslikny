@@ -60,7 +60,11 @@ namespace Roslinky
         {
             itemsPanel.Controls.Clear();
             int position = 10;
-            database.plants.Where(plant => plant.types.Any(checkedTypes.Contains)).ToList().ForEach(plant =>
+            database.plants
+                .Where(plant => plant.types.Intersect(checkedTypes).Count() == checkedTypes.Count())
+                .OrderBy(plant => plant.name)
+                .ToList()
+                .ForEach(plant =>
             {
                 var plantView = new PlantView(itemsPanel.Width, plant, this);
                 plantView.Location = new Point(0, position);
@@ -156,6 +160,11 @@ namespace Roslinky
             else
                 checkedTypes.Remove(type);
 
+            this.refreshPlants();
+        }
+
+        private void MainWindow_Resize(object sender, EventArgs e)
+        {
             this.refreshPlants();
         }
     }
